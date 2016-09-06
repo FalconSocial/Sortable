@@ -78,34 +78,34 @@
             var item = from.items[e.oldIndex]
             template.splice("items", e.newIndex, 0, item)
           }
-          this.fire("add", e)
+          this.fire("add", e, { bubbles: false })
         },
 
         onRemove: e => {
           if (template) {
             template.splice("items", e.oldIndex, 1)[0]
           }
-          this.fire("sort-remove", e)
+          this.fire("sort-remove", e, { bubbles: false })
         },
 
         onStart: e => {
-          this.fire("sort-start", e)
+          this.fire("sort-start", e, { bubbles: false })
         },
 
         onEnd: e => {
-          this.fire("sort-end", e)
+          this.fire("sort-end", e, { bubbles: false })
         },
 
         onSort: e => {
-          this.fire("sort-sorted", e)
+          this.fire("sort-sorted", e, { bubbles: false })
         },
 
         onFilter: e => {
-          this.fire("sort-filter", e)
+          this.fire("sort-filter", e, { bubbles: false })
         },
 
         onMove: e => {
-          this.fire("sort-move", e)
+          this.fire("sort-move", e, { bubbles: false })
         }
       }))
     },
