@@ -102,27 +102,27 @@
           if (template) {
             template.splice("items", e.oldIndex, 1)[0]
           }
-          this.fire("remove", e)
+          this.fire("sort-remove", e)
         },
 
         onStart: e => {
-          this.fire("start", e)
+          this.fire("sort-start", e)
         },
 
         onEnd: e => {
-          this.fire("end", e)
+          this.fire("sort-end", e)
         },
 
         onSort: e => {
-          this.fire("sort", e)
+          this.fire("sort-sorted", e)
         },
 
         onFilter: e => {
-          this.fire("filter", e)
+          this.fire("sort-filter", e)
         },
 
         onMove: e => {
-          this.fire("move", e)
+          this.fire("sort-move", e)
         }
       }))
 
